@@ -1,0 +1,478 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+
+
+
+<!-- APPOINTMENT  -->
+
+
+<div class="appointment-form p-10 w-full h-screen bg-black/75 flex top-[-100%] justify-center fixed z-20">
+    <div class="app-form w-2/5 rounded-lg  bg-gray-300">
+      <div class="head-form flex justify-between px-10 py-5 items-center">
+        <h1 class="text-[20px]">Appointment Form</h1>
+        <div class="close-form"><i class="fa-solid fa-xmark" style="color: #284059;width: 20px;"></i></div>
+      </div>
+      <hr>
+      <div class="main-form p-[50px] pt-[30px]">
+        <input class="w-full my-2 bg-gray-300 border-2 border-[#47a7b6] rounded-md h-[35px] p-2 focus:bg-white focus:outline-none" type="text" name="name" placeholder="Name" id="name">
+        <div class="flex my-2">
+          <input class="w-1/2 my-2 bg-gray-300 border-2 border-[#47a7b6] rounded-md h-[35px] p-2 focus:bg-white focus:outline-none me-2" type="email" name="email" placeholder="Email" id="Email">
+          <input class="w-1/2 my-2 bg-gray-300 border-2 border-[#47a7b6] rounded-md h-[35px] p-2 focus:bg-white focus:outline-none ms-2" type="number" name="phone" placeholder="Phone no." id="phone">
+        </div>
+        <input class="w-full my-2 bg-gray-300 border-2 border-[#47a7b6] rounded-md h-[35px] p-2 focus:bg-white focus:outline-none" type="text" name="subject" placeholder="Subject" id="subject">
+        <textarea class="w-full my-2 bg-gray-300 border-2 border-[#47a7b6] rounded-md p-2 focus:bg-white focus:outline-none h-[150px]" name="msg" id="msg" cols="30" rows="6" placeholder="Enter your message"></textarea>
+        <input type="submit" class="w-[150px] h-[50px] bg-[#47a7b6] rounded-md text-white hover:shadow-lg active:bg-white active:text-[#47a7b6] active:border-2 active:border-[#47a7b6] ">
+      </div>
+
+    </div>
+</div>
+
+
+
+<!-- END APPOINTMENT -->
+
+
+
+
+
+     <!-- HEADER -->
+     <div class="header min-h-screen w-full  bg-[url('assets/techpavilion-img.jpg')] bg-cover bg-center ">
+      <div class="min-h-screen w-full bg-black/75">
+        <div id="particles-js" class="z-1"></div>
+      <div class="absolute top-[60%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center pointer-events-none">
+        <h1  id="first" class=" text-white text-[20px] ">First choice for all small bussinesses <br>
+          <div id="second"><span style="font-size: 50px;font-weight: bold;" class="typer" id="main" data-words="Get best Solutions.,Get best Ideas.,For your Bussiness." data-colors="#47a7b6" data-delay="100" data-deleteDelay="1000"></span>
+          <span  class="cursor" data-owner="main"></span></div>
+        </h1>
+        <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+        <p id="third" class="text-white text-[20px]">Empowering your digital transformation journey with Tech Pavilion.</p>
+        <button id="fourth" class="m-7 p-5 px-10 rounded-md border-solid border-2 border-[#47a7b6] text-[#47a7b6] pointer-events-auto hover:bg-[#47a7b6] hover:text-white" onMouseOver="this.style.boxShadow='-2px -1px 13px 0px rgba(71,166,183,0.75)'" onmouseout="this.style.boxShadow='-2px -1px 13px 0px rgba(71,166,183,0)'"><a href="#">Contact Us</a></button>
+      </div>
+      </div>
+    </div>
+    
+
+    </div>
+    
+    
+    
+    <!-- END HEADER -->
+
+
+    <!-- NAVBAR -->
+    <div class="wrapper w-full flex justify-center">
+      
+    <div class="nav my-10 rounded-xl bg-gray-200 flex gap-20 fixed z-10 top-0 shadow-lg">
+      <div class="logo w-1/4 flex justify-center ms-10">
+        <a href="index.html"><img src="assets/Tech Pavilionnew.png" alt="Tech Pavillion"></a>
+      </div>
+      <div class="menu w-1/2 flex gap-5 justify-between items-center text-[18px]">
+        <div class="hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8]"><a href="index.html">Home</a></div>
+        <div id="services-menu" class="services hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8] dropdown-toggle"><a href="services.html">Services&#11167;</a> </div>
+        <!-- SERVICES DROPDOWN -->
+        <div id="services-dropdown" class="services-dd absolute z-10 bg-[#47a7b6] top-[60px] left-[340px] p-3 rounded-md hidden dropdown-content" style="box-shadow: -1px -3px 11px 0px rgba(0,0,0,0.75) ">
+          <ul>
+            <li class="hover:underline underline-offset-4"><a href="webdev.html">Web Development</a></li>
+            <li class="hover:underline underline-offset-4"><a href="dm.html">Digital Marketing</a></li>
+            <li class="hover:underline underline-offset-4"><a href="it.html">Bussiness IT Consultation</a></li>
+            <li class="hover:underline underline-offset-4"><a href="uiux.html">UI/UX Design & Development</a></li>
+            <li class="hover:underline underline-offset-4"><a href="data.html">Data Management</a></li>
+            <li class="hover:underline underline-offset-4"><a href="mobile.html">Mobile App Development</a></li>
+          </ul>
+        </div>
+        <!-- SERVICES DROPDOWN END -->
+
+        <div id="packages-menu" class="packages hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8] dropdown-toggle"><a href="packages.html">Packages&#11167;</a></div>
+
+        <!-- PACKAGES DROPDOWN -->
+        <div id="packages-dropdown" class="packages-dd absolute z-10 bg-[#47a7b6] top-[60px] left-[440px] p-3 rounded-md hidden dropdown-content" style="box-shadow: -1px -3px 11px 0px rgba(0,0,0,0.75)">
+          <ul>
+            <li class="hover:underline underline-offset-4"><a href="ndis.html">NDIS Plan</a></li>
+            <li class="hover:underline underline-offset-4"><a href="rtos.html">RTOS Plan</a></li>
+            <li class="hover:underline underline-offset-4"><a href="smallbus.html">Small Bussiness Plan</a></li>
+          </ul>
+        </div>
+        <!-- PACKAGES DEOPDOWN END -->
+
+        <div class="hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8]"><a href="about.html">About</a></div>
+        <div class="hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8]"><a href="pricing.html">Pricing</a></div>
+        <div class="hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8]"><a href="contact.html">Contact</a></div>
+      </div>
+      <div class=" w-1/4 rounded-lg flex  justify-center items-center">
+        <button class="appointment bg-[#47a8b8] ms-20 me-10 p-2 rounded-lg w-full hover:bg-gray-200 hover:border-2 hover:border-[#47a8b8] hover:text-[#47a8b8]"><a href='#'>Appointment</a></button>
+      </div>
+  </div>
+    </div>
+
+
+<!-- RESPONSIVE NAVBAR  -->
+      <div class="res-navbar">
+        <div class="navbar-res my-10 rounded-xl flex gap-20 fixed z-10 top-0 w-full justify-between items-center hidden">
+          <div class="flex justify-between items-center w-full mx-5 px-5  shadow-lg  rounded-lg bg-gray-200">
+            <div class="logo">
+              <img src="assets/Tech Pavilionnew.png" alt="">
+            </div>
+            <div class="opennav"><i class="fa-solid fa-bars" style="color: #47a7b6;"></i></div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="nav-res fixed z-[10] bg-gray-100 top-0 right-0 p-10 mt-10 me-5 rounded-lg hidden">
+        
+
+
+
+        <div class="menu flex flex-col gap-5 justify-between items-center text-[18px]">
+          <div class="closenav"><i class="fa-solid fa-xmark" style="color: #284059;width: 20px;"></i></div>
+          <div class="hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8]"><a href="index.html">Home</a></div>
+          <div id="services-menu" class="services-res hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8] dropdown-toggle">Services&#11167; </div>
+          <!-- SERVICES DROPDOWN -->
+          <div id="services-dropdown-res" class="services-dd absolute z-10 bg-[#47a7b6] top-[130px] right-[140px] w-[200px] p-3 rounded-md hidden dropdown-content" style="box-shadow: -1px -3px 11px 0px rgba(0,0,0,0.75) ">
+            <ul>
+              <li class="hover:underline underline-offset-4"><a href="webdev.html">Web Development</a></li>
+              <li class="hover:underline underline-offset-4"><a href="dm.html">Digital Marketing</a></li>
+              <li class="hover:underline underline-offset-4"><a href="it.html">Bussiness IT Consultation</a></li>
+              <li class="hover:underline underline-offset-4"><a href="uiux.html">UI/UX Design & Development</a></li>
+              <li class="hover:underline underline-offset-4"><a href="data.html">Data Management</a></li>
+              <li class="hover:underline underline-offset-4"><a href="mobile.html">Mobile App Development</a></li>
+            </ul>
+          </div>
+          <!-- SERVICES DROPDOWN END -->
+  
+          <div id="packages-menu" class="packages-res hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8] dropdown-toggle">Packages&#11167;</div>
+  
+          <!-- PACKAGES DROPDOWN -->
+          <div id="packages-dropdown-res" class="packages-dd absolute z-10 bg-[#47a7b6] top-[180px] right-[140px] w-[200px] p-3 rounded-md hidden dropdown-content" style="box-shadow: -1px -3px 11px 0px rgba(0,0,0,0.75)">
+            <ul>
+              <li class="hover:underline underline-offset-4"><a href="ndis.html">NDIS Plan</a></li>
+              <li class="hover:underline underline-offset-4"><a href="rtos.html">RTOS Plan</a></li>
+              <li class="hover:underline underline-offset-4"><a href="smallbus.html">Small Bussiness Plan</a></li>
+            </ul>
+          </div>
+          <!-- PACKAGES DEOPDOWN END -->
+  
+          <div class="hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8]"><a href="about.html">About</a></div>
+          <div class="hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8]"><a href="pricing.html">Pricing</a></div>
+          <div class="hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8]"><a href="contact.html">Contact</a></div>
+        </div>
+
+
+
+
+      </div>
+      <!-- END RESPONSIVE NAVBAR  -->
+    <!-- END NAVBAR -->
+
+   
+
+    <!-- SERVICES -->
+
+
+    <section class="services bg-white section-padding-2 section-bg w-full pt-10 pb-5 bg-white">
+      
+        <!-- Section Headding -->
+        <div class="flex justify-center m-10">  
+          <div class="text-center">
+            <div class="section-headding">
+              <h2 class="text-[30px]">Services</h2>
+              <p class="text-[50px] text-[#47a7b6]">What we provide</p>
+            </div>
+          </div>
+        </div>
+        <!-- Services Content -->
+        <div class="res-service bg-white flex justify-evenly">
+          <!-- Services Single -->
+          <div class="col-lg-4 col-md-6 mb-30">
+            <div class="services-box">
+              <div class="count">
+                <span>01</span>
+              </div>
+              <div class="icon">
+                <i class="fa-solid fa-file-code" style="color: #47a7b6;"></i>
+              </div>
+              <h2>Web Development</h2>
+              <p>Web development is the backbone of the digital world, and it plays a crucial role in shaping the online presence...</p>
+              <a class="read_details" href="webdev.html">View Details</a>
+            </div>
+          </div>
+          <!-- Services Single -->
+          <div class="col-lg-4 col-md-6 mb-30">
+            <div class="services-box">
+              <div class="count">
+                <span>02</span>
+              </div>
+              <div class="icon">
+                <i class="fa-solid fa-bullseye" style="color: #47a7b6;"></i>
+              </div>
+              <h2>Digital Marketing</h2>
+              <p>Our digital marketing service is designed to help you reach your target audience, increase brand awareness, and...</p>
+              <a class="read_details" href="#">View Details</a>
+            </div>
+          </div>
+          <!-- Services Single -->
+          <div class="col-lg-4 col-md-6 mb-30">
+            <div class="services-box">
+              <div class="count">
+                <span>03</span>
+              </div>
+              <div class="icon">
+                <i class="fa-regular fa-handshake" style="color: #47a7b6;"></i>
+              </div>
+              <h2>Business IT Consultation</h2>
+              <p>Our business IT consultant service is designed to help you optimize your IT infrastructure and operations to...</p>
+              <a class="read_details" href="services-details.html">View Details</a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="res-service flex justify-evenly">
+          <!-- Services Single -->
+          <div class="col-lg-4 col-md-6 mb-30">
+            <div class="services-box">
+              <div class="count">
+                <span>04</span>
+              </div>
+              <div class="icon">
+                <i class="fa-regular fa-lightbulb" style="color: #47a7b6;"></i>
+              </div>
+              <h2>UI/UX Design & Development</h2>
+              <p>At our UI-UX design service, we are committed to delivering exceptional user experiences that set your...</p>
+              <a class="read_details" href="services-details.html">View Details</a>
+            </div>
+          </div>
+          <!-- Services Single -->
+          <div class="col-lg-4 col-md-6 mb-30">
+            <div class="services-box">
+              <div class="count">
+                <span>05</span>
+              </div>
+              <div class="icon">
+                <i class="fa-solid fa-database" style="color: #47a7b6;"></i>
+              </div>
+              <h2>Data Management</h2>
+              <p>Our data management service is designed to help you efficiently and effectively manage your data to drive business growth....</p>
+              <a class="read_details" href="services-details.html">View Details</a>
+            </div>
+          </div>
+          <!-- Services Single -->
+          <div class="col-lg-4 col-md-6 mb-30">
+            <div class="services-box">
+              <div class="count">
+                <span>06</span>
+              </div>
+              <div class="icon">
+                <i class="fa-solid fa-mobile-screen-button" style="color: #47a7b6;"></i>
+              </div>
+              <h2>Mobile App Development</h2>
+              <p>Our mobile application service is designed to help you take your business to the next level. In todays fast-paced world...</p>
+              <a class="read_details" href="services-details.html">View Details</a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- END SERVICES -->
+
+
+
+    <!-- OUR PORTFOLIO -->
+
+
+    <div class="h-screen fixed top-0 z-[-1]">
+      <img class="obejct-cover max-w-none" src="assets/portfolio-bg.avif" alt="">
+    </div>
+
+
+    <section class=" flex justify-center  text-center portfolio-bg">
+      <div class="container pt-[5vw]">
+        <!-- Section Headding -->
+        <div class="flex justify-center ">
+          <div class="text-center">
+            <div class="section-headding-2">
+              <h2 class="text-white text-[50px] text-center" >Our Portfolio</h2>
+            </div>
+          </div>
+        </div>
+        <!-- Category -->
+        <!-- Portfolio -->
+        <div class="flex portfolio-full portF">
+          <!-- Single -->
+          <div class="project w-1/3 m-[30px] h-[25vw] overflow-hidden mix shadow-lg">
+            <div class="portfolio-item">
+              <img src="assets/company-1.jpg" alt="portfolio-item">
+              <div class="portfolio-overly">
+                <div class="portfolio-overly-full">
+                  <p>Project 1</p>
+                  <ul>
+                    <li><a data-rel="lightcase:portfolio" href="assets/company-1.jpg"><i class="far fa-eye"></i></a></li>
+                    <li><a href="assets/company-1.jpg"><i class="fas fa-link"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single -->
+          <div class="project w-1/3 m-[30px] h-[25vw] overflow-hidden mix  shadow-lg ">
+            <div class="portfolio-item">
+              <img src="assets/company-2.jpg" alt="portfolio-item">
+              <div class="portfolio-overly">
+                <div class="portfolio-overly-full">
+                  <p>Project 2</p>
+                  <ul>
+                    <li><a data-rel="lightcase:portfolio" href="assets/company-2.jpg"><i class="far fa-eye"></i></a></li>
+                    <li><a href="assets/company-2.jpg"><i class="fas fa-link"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single -->
+          <div class="project w-1/3 m-[30px] h-[25vw] overflow-hidden mix shadow-lg">
+            <div class="portfolio-item">
+              <img src="assets/company-3.jpg" alt="portfolio-item">
+              <div class="portfolio-overly">
+                <div class="portfolio-overly-full">
+                  <p>Project 3</p>
+                  <ul>
+                    <li><a data-rel="lightcase:portfolio" href="assets/company-3.jpg"><i class="far fa-eye"></i></a></li>
+                    <li><a href="assets/company-3.jpg"><i class="fas fa-link"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- END OUR PORTFOLIO -->
+
+
+    <!-- ABOUT -->
+    <div class="about w-full min-h-screen bg-gray-100 p-[80px] text-center">
+
+      <h1 class="text-[40px]">About</h1>
+      <h1 class="text-[40px] text-[#47a7b6] font-bold">Get the Right Solution For Your Business</h1>
+      <p>Tech Pavilion is a dynamic and innovative IT company dedicated to providing cutting-edge solutions to meet the unique needs of our clients. We specialize in delivering customized IT solutions that help businesses of all sizes achieve their goals and stay ahead of the competition.</p>
+      <div class="content flex justify-evenly ps-[100px] pe-[100px]">
+        <div class="content-1 w-1/3 m-5 flex flex-col items-center p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+            <!-- Your SVG icon content here -->
+            <path d="M15,42l.9-10.8a.1.1,0,0,1,.2,0L17,42h3V22l5-4,3-4-2-2-3.12,3.88L20,18H12.544A3,3,0,0,0,10.1,19.256L8,24l.5,6H11V25l1-3V42Z" id="id_101" style="fill: rgb(8, 133, 158);"></path><circle cx="15.951" cy="15" r="3" id="id_102" style="fill: rgb(0, 136, 136);"></circle><circle cx="46" cy="16" r="2" id="id_103" style="fill: rgb(0, 0, 0);"></circle><path d="M38.069,17A7.994,7.994,0,0,0,45,23.931V23h2v.931A7.994,7.994,0,0,0,53.931,17H53V15h.931A7.994,7.994,0,0,0,47,8.069V9H45V8.069A7.994,7.994,0,0,0,38.069,15H39v2ZM46,11a5,5,0,1,1-5,5A5,5,0,0,1,46,11Z" id="id_104" style="fill: rgb(0, 0, 0);"></path><path d="M2,30H6.493l-.486-5.834a2.011,2.011,0,0,1,.164-.977l2.1-4.744a1.922,1.922,0,0,1,.2-.352,5,5,0,0,1,2.643-1.876A4.936,4.936,0,0,1,10.951,15a4.993,4.993,0,0,1,9.983-.171l.55-.405,2.957-3.677a2,2,0,0,1,2.973-.161l2,2A2,2,0,0,1,29.6,15.2l-3,4a2.033,2.033,0,0,1-.35.362L22,22.961V30H62V2H2ZM34,15h1.05A11,11,0,0,1,45,5.05V4h2V5.05A11,11,0,0,1,56.95,15H58v2H56.95A11,11,0,0,1,47,26.95V28H45V26.95A11,11,0,0,1,35.05,17H34Z" id="id_105"></path><circle cx="58" cy="51.5" r="2.5" id="id_106" style="fill: rgb(0, 0, 0);"></circle><path d="M60,54H56a2,2,0,0,0-2,2v6h8V56A2,2,0,0,0,60,54Z" id="id_107" style="fill: rgb(0, 0, 0);"></path><circle cx="45" cy="51.5" r="2.5" id="id_108"></circle><path d="M41,56v6h8V56a2,2,0,0,0-2-2H43A2,2,0,0,0,41,56Z" id="id_109"></path><circle cx="32" cy="51.5" r="2.5" id="id_110"></circle><path d="M28,56v6h8V56a2,2,0,0,0-2-2H30A2,2,0,0,0,28,56Z" id="id_111"></path><circle cx="19" cy="51.5" r="2.5" id="id_112" style="fill: rgb(0, 0, 0);"></circle><path d="M15,56v6h8V56a2,2,0,0,0-2-2H17A2,2,0,0,0,15,56Z" id="id_113" style="fill: rgb(0, 0, 0);"></path><circle cx="6" cy="51.5" r="2.5" id="id_114" style="fill: rgb(0, 0, 0);"></circle><path d="M10,56a2,2,0,0,0-2-2H4a2,2,0,0,0-2,2v6h8Z" id="id_115"></path>
+        </svg>
+        <h1 class="text-[25px]">Our Mission</h1>
+        <p>Offering new value to our clients by prudently responding to the rapidly changing market and delivering optimised technology solutions that fit your business needs</p>
+        </div>
+        <div class="content-2 w-1/3 m-5"><img class=" shadow-lg" src="assets/about-us.jpg" alt=""></div>
+        <div class="content-3 w-1/3 m-5 flex flex-col items-center p-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 128 128">
+            <!-- Your SVG icon content here -->
+            <path class="cls-1" d="M118.945,25.02378,94.6602,27.111a.63822.63822,0,0,0-.38324,1.10016l6.12605,5.77767-1.35983,1.38795-.90738.926-4.606,4.78165q-2.66223,2.80594-5.30318,5.62517-1.89191,2.02762-3.76253,4.07917-4.47829,4.90137-8.8422,9.91453c-1.44753,1.67638-2.88975,3.36073-4.31068,5.06373-.37784.45235-.75037.91-1.12556,1.365l-1.51938-.85416L44.96023,52.952,41.1764,50.826l-2.71146,2.95362-3.39266,3.696L8.36209,86.56995l5.6092,5.47084,28.90012-27.889h.00266L59.79213,75.15731l8.65062,5.62783,3.13721,2.04091.71844.46566,4.08182-3.57626q2.5066-2.19925,4.936-4.47032c1.62583-1.5114,3.22769-3.04142,4.82423-4.57677q4.78168-4.618,9.42229-9.36373c3.10794-3.15318,6.15734-6.36223,9.19876-9.57661l4.52621-4.85882.612-.66788,1.60036-1.74654,5.84915,5.51652a.63822.63822,0,0,0,1.07528-.43187L119.63707,25.692A.63819.63819,0,0,0,118.945,25.02378Z" id="id_101" style="fill: rgb(0, 0, 0);"></path><path class="cls-2" d="M14.0931,124.06753a2.09074,2.09074,0,0,0,2.08768,2.0877H30.65223a2.09077,2.09077,0,0,0,2.0877-2.0877V81.84173L14.0931,99.83615Z" id="id_102" style="fill: rgb(0, 0, 0);"></path><path class="cls-2" d="M39.95192,74.88121v49.18632a2.09074,2.09074,0,0,0,2.08768,2.0877H56.51105a2.09076,2.09076,0,0,0,2.08768-2.0877V81.17272L43.565,71.39382Z" id="id_103" style="fill: rgb(0, 0, 0);"></path><path class="cls-2" d="M72.814,90.41072,65.81074,85.8629v38.20463a2.09074,2.09074,0,0,0,2.08768,2.0877H82.36987a2.09076,2.09076,0,0,0,2.08768-2.0877V80.10042c-1.3902,1.28819-2.84447,2.59775-4.32245,3.89543Z" id="id_104" style="fill: rgb(0, 0, 0);"></path><path class="cls-2" d="M99.617,65.30158c-2.86583,2.918-5.48492,5.53-7.94743,7.9332v50.83275a2.09074,2.09074,0,0,0,2.08768,2.0877h14.47145a2.09076,2.09076,0,0,0,2.08768-2.0877V54.11823l-1.41867,1.52306C105.95833,58.74673,102.82206,62.05143,99.617,65.30158Z" id="id_105" style="fill: rgb(0, 0, 0);"></path><path class="cls-2" d="M72.25548,39.621q-1.34492.98588-5.01058.98993a22.1044,22.1044,0,0,1-6.15064-.83982,31.45325,31.45325,0,0,1-5.01062-1.86225l-2.58035,6.90124a40.84986,40.84986,0,0,0,4.05311,1.65128,27.96852,27.96852,0,0,0,7.10815,1.351v7.14062h7.56254V47.6299a15.90172,15.90172,0,0,0,4.94974-1.558,10.96664,10.96664,0,0,0,3.27007-2.58035,9.2677,9.2677,0,0,0,1.80139-3.266,12.13766,12.13766,0,0,0,.5396-3.57033,10.73107,10.73107,0,0,0-.92909-4.617,10.59266,10.59266,0,0,0-2.58037-3.44859,18.25977,18.25977,0,0,0-3.89894-2.61282,44.11272,44.11272,0,0,0-4.89293-2.10565q-1.74054-.60254-2.96985-1.11168a13.189,13.189,0,0,1-2.06914-1.0508,3.62306,3.62306,0,0,1-1.22934-1.22932,3.27232,3.27232,0,0,1-.39353-1.65124,3.0231,3.0231,0,0,1,1.26177-2.51951,6.92631,6.92631,0,0,1,4.14238-.96156,24.34767,24.34767,0,0,1,5.48932.60046,27.7658,27.7658,0,0,1,4.58867,1.44029l1.86223-7.20148A24.07539,24.07539,0,0,0,77.59879,8.9854a34.19813,34.19813,0,0,0-5.3717-.90071V1.84477H64.66455V8.32814a15.06548,15.06548,0,0,0-4.56026,1.52952,9.86878,9.86878,0,0,0-4.8889,5.87883,12.70566,12.70566,0,0,0-.572,3.80969,9.21034,9.21034,0,0,0,3.39179,7.5017,15.757,15.757,0,0,0,3.42018,2.13q1.89269.87026,3.87055,1.59042c1.35915.48282,2.56008.92909,3.60276,1.351A15.53469,15.53469,0,0,1,71.509,33.40951a5.34412,5.34412,0,0,1,1.558,1.46872,3.43251,3.43251,0,0,1,.5396,1.95148A3.25988,3.25988,0,0,1,72.25548,39.621Z" id="id_106" style="fill: rgb(15, 158, 151);"></path>
+        </svg>
+        <h1 class="text-[25px]">Our Vision</h1>
+        <p>To be a digital platform leader for startup businesses and grow the digital ecosystem together by creating innovation in business processes, systems and business models.</p>
+        </div>
+      </div>
+    </div>
+    <!-- END ABOUT -->
+
+    <!-- GET STARTED -->
+    <div class="get-started w-full p-[100px]">
+      <div class="container-gs p-[50px] w-full h-full bg-[#47a7b6] rounded-xl flex justify-between items-center">
+        <div class="text-gs">
+          <h1 class="text-[30px] font-bold">We Are with You</h1>
+          <h1 class="text-[20px]">Start Your Journey to Better Business</h1>
+        </div>
+        <div class="btn">
+          <button class="bg-black rounded-md p-5"><a href="#" class="text-white">Get Started Now</a></button>
+        </div>
+      </div>
+
+    </div>
+    <!-- END GET STARTED -->
+
+
+    <!-- SKILL SET -->
+    <div class="skill w-full min-h-screen bg-gray-100 text-center p-[100px]">
+      <div class="heading pb-[50px]">
+        <h1 class="text-[30px]">Skillset</h1>
+        <h1 class="text-[30px] font-bold text-[#47a7b6]">Innovative Solution For Business</h1>
+      </div>
+      <div class="main-skill flex ps-[100px] pe-[100px] gap-10 items-center justify-center">
+        <div class="text w-2/3">
+          A consultant is someone who has some level of expertise that a particular group of people find valuable, and people within that group are willing to pay the consultant.
+        </div>
+        <div class="img-skill w-1/3">
+          <img class="shadow-lg rounded-md" src="assets/skillset.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- END SKILL SET -->
+
+
+
+    <!-- FOOTER  -->
+    <footer class="footer w-full min-h-screen bg-[#47a7b6] flex flex-col p-[50px] text-center text-[#284059] text-[20px] font-light">
+      <div class="top flex">
+        <div class="col-1 flex  flex-col items-center w-1/3 p-5">
+          <img class="w-[100px] rounded-md" src="assets/logo-footer.png">
+          <p>Tech Pavilion specialises in small business web site design packages and NDIS service provider websites that attract customers and boost your revenue, helping you get online affordably. Do not spend more than you need to on a new website for your business.</p>
+          <br>
+          <p>It could not be easier. Get in touch today for a no-obligation chat.</p>
+        </div>
+        <div class="col-2 flex flex-col items-center w-1/3 p-5">
+          <h1 class="text-white text-[40px] font-bold">
+            Get in Touch
+          </h1>
+          <br>
+          <p><i class="fa-solid fa-location-dot" style="color: #284059;"></i>Level 14 333 Collins Street, Melbourne VIC, 3000</p>
+          <p><i class="fa-solid fa-envelope" style="color: #284059;"></i> connect@techpavilion.com.au</p>
+          <p><i class="fa-solid fa-phone" style="color: #284059;"></i> 0420 681 181</p>
+          <button class="p-4 mt-5 bg-[#284059] font-bold text-white rounded-md">Book a Chat</button>
+        </div>
+        <div class="col-3 flex flex-col items-center w-1/3 p-5">
+          <div class="flex gap-3">
+            <img class="w-[70px]" src="assets/flag-1.jpg" alt="">
+            <img class="w-[70px]" src="assets/flag-2.jpg" alt="">
+          </div>
+          <p>At Tech Pavilion, diversity, equity and inclusion are at the core of who we are. Our commitment to these values is unwavering.</p>
+          <p>We acknowledge and recognise the Wurundjeri Woi-wurrung people of the Kulin Nation as the traditional custodians of the land upon which we live and work, and we pay our respects to their Elders past, present and emerging.</p>
+          <p class="mt-5"><a href="#">Privacy</a> | <a href="#">Terms of Service</a> | <a href="#">Website Terms</a></p>
+        </div>
+      </div>
+      <hr>
+      <div class="social flex w-full justify-center m-5">
+        <div class="fb hover-white w-[40px] h-[40px] hover:bg-[#284059] rounded-full flex justify-center items-center"><i class="fb fa-brands fa-facebook-f" style="color: #284059;"></i></div>
+        <div class="twitter hover-white w-[40px] h-[40px] hover:bg-[#284059] rounded-full flex justify-center items-center"><i class="fa-brands fa-twitter" style="color: #284059;"></i></div>
+        <div class="linkedin hover-white w-[40px] h-[40px] hover:bg-[#284059] rounded-full flex justify-center items-center"><i class="fa-brands fa-linkedin" style="color: #284059;"></i></div>
+        <div class="insta hover-white w-[40px] h-[40px] hover:bg-[#284059] rounded-full flex justify-center items-center"><i class="fa-brands fa-instagram" style="color: #284059;"></i></div>
+      </div>
+      <div class="copyright">
+        <p>	&#169; 2023 Tech Pavilion. All rights reserved.</p>
+      </div>
+
+    </footer>
+    <!-- END FOOTER  -->
+
+
+
+
+    
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

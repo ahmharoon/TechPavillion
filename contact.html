@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+
+
+<!-- APPOINTMENT  -->
+
+
+<div class="appointment-form p-10 w-full h-screen bg-black/75 flex top-[-100%] justify-center fixed z-20">
+  <div class="app-form w-2/5 rounded-lg  bg-gray-300">
+    <div class="head-form flex justify-between px-10 py-5 items-center">
+      <h1 class="text-[20px]">Appointment Form</h1>
+      <div class="close-form"><i class="fa-solid fa-xmark" style="color: #284059;width: 20px;"></i></div>
+    </div>
+    <hr>
+    <div class="main-form p-[50px] pt-[30px]">
+      <input class="w-full my-2 bg-gray-300 border-2 border-[#47a7b6] rounded-md h-[35px] p-2 focus:bg-white focus:outline-none" type="text" name="name" placeholder="Name" id="name">
+      <div class="flex my-2">
+        <input class="w-1/2 my-2 bg-gray-300 border-2 border-[#47a7b6] rounded-md h-[35px] p-2 focus:bg-white focus:outline-none me-2" type="email" name="email" placeholder="Email" id="Email">
+        <input class="w-1/2 my-2 bg-gray-300 border-2 border-[#47a7b6] rounded-md h-[35px] p-2 focus:bg-white focus:outline-none ms-2" type="number" name="phone" placeholder="Phone no." id="phone">
+      </div>
+      <input class="w-full my-2 bg-gray-300 border-2 border-[#47a7b6] rounded-md h-[35px] p-2 focus:bg-white focus:outline-none" type="text" name="subject" placeholder="Subject" id="subject">
+      <textarea class="w-full my-2 bg-gray-300 border-2 border-[#47a7b6] rounded-md p-2 focus:bg-white focus:outline-none h-[150px]" name="msg" id="msg" cols="30" rows="6" placeholder="Enter your message"></textarea>
+      <input type="submit" class="w-[150px] h-[50px] bg-[#47a7b6] rounded-md text-white hover:shadow-lg active:bg-white active:text-[#47a7b6] active:border-2 active:border-[#47a7b6] ">
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- END APPOINTMENT -->
+
+
+
+
+     <!-- HEADER -->
+     <div class="header h-[80vh] w-full  bg-[url('assets/techpavilion-img.jpg')] bg-cover bg-center ">
+      <div class="h-full w-full bg-black/75">
+        <div id="particles-js" class="z-1"></div>
+      <div class="absolute top-[60%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center pointer-events-none">
+        <h1  id="first" class=" text-white text-[50px] font-bold shadow-lg">Contact Us 
+        </h1>
+      </div>
+      </div>
+    </div>
+    
+
+    </div>
+    
+    
+    
+    <!-- END HEADER -->
+
+
+    <!-- NAVBAR -->
+    <div class="wrapper w-full flex justify-center">
+      
+        <div class="nav my-10 rounded-xl bg-gray-200 flex gap-20 fixed z-10 top-0 shadow-lg">
+          <div class="logo w-1/4 flex justify-center ms-10">
+            <a href="index.html"><img src="assets/Tech Pavilionnew.png" alt="Tech Pavillion"></a>
+          </div>
+          <div class="menu w-1/2 flex gap-5 justify-between items-center text-[18px]">
+            <div class="hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8]"><a href="index.html">Home</a></div>
+            <div id="services-menu" class="services hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8] dropdown-toggle"><a href="services.html">Services&#11167;</a> </div>
+            <!-- SERVICES DROPDOWN -->
+            <div id="services-dropdown" class="services-dd absolute z-10 bg-[#47a7b6] top-[60px] left-[340px] p-3 rounded-md hidden dropdown-content" style="box-shadow: -1px -3px 11px 0px rgba(0,0,0,0.75) ">
+              <ul>
+                <li class="hover:underline underline-offset-4"><a href="webdev.html">Web Development</a></li>
+                <li class="hover:underline underline-offset-4"><a href="dm.html">Digital Marketing</a></li>
+                <li class="hover:underline underline-offset-4"><a href="it.html">Bussiness IT Consultation</a></li>
+                <li class="hover:underline underline-offset-4"><a href="uiux.html">UI/UX Design & Development</a></li>
+                <li class="hover:underline underline-offset-4"><a href="data.html">Data Management</a></li>
+                <li class="hover:underline underline-offset-4"><a href="mobile.html">Mobile App Development</a></li>
+              </ul>
+            </div>
+            <!-- SERVICES DROPDOWN END -->
+    
+            <div id="packages-menu" class="packages hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8] dropdown-toggle"><a href="packages.html">Packages&#11167;</a></div>
+    
+            <!-- PACKAGES DROPDOWN -->
+            <div id="packages-dropdown" class="packages-dd absolute z-10 bg-[#47a7b6] top-[60px] left-[440px] p-3 rounded-md hidden dropdown-content" style="box-shadow: -1px -3px 11px 0px rgba(0,0,0,0.75)">
+              <ul>
+                <li class="hover:underline underline-offset-4"><a href="ndis.html">NDIS Plan</a></li>
+                <li class="hover:underline underline-offset-4"><a href="rtos.html">RTOS Plan</a></li>
+                <li class="hover:underline underline-offset-4"><a href="smallbus.html">Small Bussiness Plan</a></li>
+              </ul>
+            </div>
+            <!-- PACKAGES DEOPDOWN END -->
+    
+            <div class="hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8]"><a href="about.html">About</a></div>
+            <div class="hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8]"><a href="pricing.html">Pricing</a></div>
+            <div class="hover:border-2 hover:border-[#47a8b8] rounded-md hover:px-2 hover:text-[#47a8b8]"><a href="contact.html">Contact</a></div>
+          </div>
+          <div class="appointment w-1/4 rounded-lg flex  justify-center items-center">
+            <button class="bg-[#47a8b8] ms-20 me-10 p-2 rounded-lg w-full hover:bg-gray-200 hover:border-2 hover:border-[#47a8b8] hover:text-[#47a8b8]"><a href='#'>Appointment</a></button>
+          </div>
+      </div>
+        </div>
+    <!-- END NAVBAR -->
+
+
+    <!-- CONTACT  -->
+    <div class="contact w-full text-center min-h-screen p-[100px] flex bg-gray-100">
+        <div class="leftc w-1/2 bg-[#47a7b6] p-[100px]" style="box-shadow: 0px -1px 9px 0px rgba(0,0,0,0.75);">
+            <h1 class="text-[40px] font-extrabold">Get In Touch</h1>
+            <br>
+            <p class="px-10 text-[20px]">"We're here to make your digital dreams a reality. Have a project in mind or simply want to learn more about what we can do for you? Don't hesitate to get in touch with us. Our friendly team is eager to discuss your needs, provide expert advice, and offer a customized solution that suits you best."</p>
+            <br><br>
+            <p class="text-[20px]"><i class="fa-solid fa-square-phone" style="color: #284059;"></i> Call Us: 0420 681 181</p>
+            <br>
+            <p class="text-[20px]"><i class="fa-solid fa-envelope" style="color: #284059;"></i> Email Us: connect@techpavilion.com.au</p>
+            <br>
+            <p class="text-[20px]"><i class="fa-solid fa-globe" style="color: #284059;"></i> Location: Level 14 333 Collins Street, Melbourne VIC, 3000</p>
+            <br><br>
+            <h1 class="text-[40px] font-extrabold">Tech Pavilion</h1>
+        </div>
+        <div class="rightc text-left p-[50px] w-1/2 flex z-[1] bg-gray-100" style="box-shadow: 0px -1px 9px 0px rgba(0,0,0,0.75); ">
+        
+            <div class="w-full h-full mx-auto bg-white p-8 py-[50px] rounded-lg shadow">
+                <h2 class="text-[40px] font-extrabold text-gray-800 mb-10">Contact</h2>
+            
+                <form action="/contact.html" method="POST" class="space-y-4">
+                    <div>
+                        <label for="fname" class="block text-sm font-medium text-gray-700 mt-6">First Name:</label>
+                        <input required type="text" id="fname" name="fname" class="mt-1 block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    </div>
+            
+                    <div>
+                        <label for="lname" class="block text-sm font-medium text-gray-700 mt-6">Last Name:</label>
+                        <input required type="text" id="lname" name="lname" class="mt-1 block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    </div>
+            
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-gray-700 mt-6">Company:</label>
+                        <input required type="text" id="company" name="company" class="mt-1 block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    </div>
+            
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone No:</label>
+                        <input required type="tel" id="phone" name="phone" class="mt-1 block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    </div>
+            
+                    <div>
+                        <label for="country" class="block text-sm font-medium text-gray-700 mt-6">Country:</label>
+                        <input required type="text" id="country" name="country" class="mt-1 block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    </div>
+            
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mt-6">Email:</label>
+                        <input required type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    </div>
+            
+                    <div>
+                        <label for="msg" class="block text-sm font-medium text-gray-700 mt-6">Message:</label>
+                        <textarea id="msg" name="msg" class="mt-1 block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 mb-[70px]"></textarea>
+                    </div>
+            
+                    <input type="submit" value="Submit" class="cursor-pointer w-full rounded-md border border-transparent bg-[#47a7b6] py-2 text-sm font-medium text-white shadow-sm hover:bg-white hover:text-[#47a7b6] hover:border-2 hover:border-[#47a7b6] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END CONTACT -->
+
+
+
+    <!-- MAP  -->
+    <div class="map flex items-center justify-center h-screen p-10">
+        <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=333 Collins St 333 Collins St, Melbourne VIC 3000, Australia&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://strandsgame.net/">Strands</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:100%;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:100%;}.gmap_iframe {width:100%!important;height:100%!important;}</style></div>
+    </div>
+    <!-- END MAP  -->
+
+
+
+     <!-- GET STARTED -->
+     <div class="get-started w-full p-[100px]">
+        <div class="container-gs p-[50px] w-full h-full bg-[#47a7b6] rounded-xl flex justify-between items-center">
+          <div class="text-gs">
+            <h1 class="text-[30px] font-bold">We Are with You</h1>
+            <h1 class="text-[20px]">Start Your Journey to Better Business</h1>
+          </div>
+          <div class="btn">
+            <button class="bg-black rounded-md p-5"><a href="#" class="text-white">Get Started Now</a></button>
+          </div>
+        </div>
+        
+      </div>
+      <!-- END GET STARTED -->
+  
+  
+  
+      <!-- FOOTER  -->
+      <footer class="footer w-full h-screen bg-[#47a7b6] flex flex-col p-[50px] text-center text-[#284059] text-[20px] font-light">
+        <div class="top flex">
+          <div class="col-1 flex  flex-col items-center w-1/3 p-5">
+            <img class="w-[100px] rounded-md" src="assets/logo-footer.png">
+            <p>Tech Pavilion specialises in small business web site design packages and NDIS service provider websites that attract customers and boost your revenue, helping you get online affordably. Do not spend more than you need to on a new website for your business.</p>
+            <br>
+            <p>It could not be easier. Get in touch today for a no-obligation chat.</p>
+          </div>
+          <div class="col-2 flex flex-col items-center w-1/3 p-5">
+            <h1 class="text-white text-[40px] font-bold">
+              Get in Touch
+            </h1>
+            <br>
+            <p><i class="fa-solid fa-location-dot" style="color: #284059;"></i>Level 14 333 Collins Street, Melbourne VIC, 3000</p>
+            <p><i class="fa-solid fa-envelope" style="color: #284059;"></i> connect@techpavilion.com.au</p>
+            <p><i class="fa-solid fa-phone" style="color: #284059;"></i> 0420 681 181</p>
+            <button class="p-4 mt-5 bg-[#284059] font-bold text-white rounded-md">Book a Chat</button>
+          </div>
+          <div class="col-3 flex flex-col items-center w-1/3 p-5">
+            <div class="flex gap-3">
+              <img class="w-[70px]" src="assets/flag-1.jpg" alt="">
+              <img class="w-[70px]" src="assets/flag-2.jpg" alt="">
+            </div>
+            <p>At Tech Pavilion, diversity, equity and inclusion are at the core of who we are. Our commitment to these values is unwavering.</p>
+            <p>We acknowledge and recognise the Wurundjeri Woi-wurrung people of the Kulin Nation as the traditional custodians of the land upon which we live and work, and we pay our respects to their Elders past, present and emerging.</p>
+            <p class="mt-5"><a href="#">Privacy</a> | <a href="#">Terms of Service</a> | <a href="#">Website Terms</a></p>
+          </div>
+        </div>
+        <hr>
+        <div class="social flex w-full justify-center m-5">
+          <div class="fb hover-white w-[40px] h-[40px] hover:bg-[#284059] rounded-full flex justify-center items-center"><i class="fb fa-brands fa-facebook-f" style="color: #284059;"></i></div>
+          <div class="twitter hover-white w-[40px] h-[40px] hover:bg-[#284059] rounded-full flex justify-center items-center"><i class="fa-brands fa-twitter" style="color: #284059;"></i></div>
+          <div class="linkedin hover-white w-[40px] h-[40px] hover:bg-[#284059] rounded-full flex justify-center items-center"><i class="fa-brands fa-linkedin" style="color: #284059;"></i></div>
+          <div class="insta hover-white w-[40px] h-[40px] hover:bg-[#284059] rounded-full flex justify-center items-center"><i class="fa-brands fa-instagram" style="color: #284059;"></i></div>
+        </div>
+        <div class="copyright">
+          <p>	&#169; 2023 Tech Pavilion. All rights reserved.</p>
+        </div>
+  
+      </footer>
+      <!-- END FOOTER  -->
+  
+  
+  
+  
+      
+      <script src="assets/js/particles.js"></script>
+      <script src="assets/js/app.js"></script>
+      <script src="script.js"></script>
+  </body>
+  </html>
